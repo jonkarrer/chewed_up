@@ -1,0 +1,42 @@
+.Splash {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  height: 100vh;
+  width: 100vw;
+  transition: all 1s ease;
+  z-index: 3;
+  position: fixed;
+  overflow: hidden;
+}
+.image {
+  width: 100vw;
+  max-height: 200px;
+  object-fit: cover;
+}
+.main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 15% auto;
+}
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin-left: 50px;
+}
+.arrow:hover {
+  cursor: pointer;
+}
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.summary h1 {
+  font-size: 4vw;
+  color: #CBC9C9;
+  width: 50vw;
+}

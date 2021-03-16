@@ -1,0 +1,40 @@
+.Admin {
+  background: black;
+  display: flex;
+}
+.form {
+  display: grid;
+}
+.title {
+  padding: 20px;
+  text-align: center;
+  font-size: 1em;
+}
+.catagory {
+  padding: 20px;
+  text-align: center;
+  font-size: 1em;
+}
+.submit {
+  padding: 20px;
+  font-size: 2em;
+}
+.submit:hover {
+  cursor: pointer;
+  background: lightskyblue;
+}
+.rightPanel {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  background: white;
+}
+.delete {
+  flex: 1;
+  border: lightskyblue solid thin;
+}
+.update {
+  flex: 1;
+  border: lightskyblue solid thin;
+}
