@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import Post from "../comps/Post";
-import Nav from "../comps/Nav";
 import { useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 import styles from "../styles/Home.module.css";
@@ -55,17 +54,17 @@ export default function HomeRun({ allPosts }) {
             </div>
             <ul className={styles.list}>
               <li>
-                <Link href="/admin">
+                <Link href="/about">
                   <a>About</a>
                 </Link>
               </li>
               <li>
-                <Link href="/admin">
+                <Link href="/series">
                   <a>Series</a>
                 </Link>
               </li>
               <li>
-                <Link href="/admin">
+                <Link href="/contact">
                   <a>Contact</a>
                 </Link>
               </li>
