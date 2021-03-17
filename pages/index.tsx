@@ -40,10 +40,7 @@ export default function HomeRun({ allPosts }) {
         />
         <title>Chewed Up</title>
       </Head>
-      <header className={styles.header}>
-        <img className={styles.headerImage} src="/Up.jpg" alt="heading logo" />
-      </header>
-      <Nav />
+
       <main>
         <div className={styles.Home} id="Home">
           <div className={styles.leftPanel}>

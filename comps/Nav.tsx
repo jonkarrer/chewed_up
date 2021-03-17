@@ -3,24 +3,27 @@ import Link from "next/link";
 import { useState } from "react";
 
 function Nav() {
-  const [linkContainer, setLinkContainer] = useState("40px");
+  const [navHeight, setNavHeight] = useState("40px");
   const [linkDisplay, setLinkDisplay] = useState("none");
-  const [toggleDropdown, setDropdown] = useState(false);
+  const [toggleNav, setNav] = useState(false);
 
   const handleClick = () => {
-    if (toggleDropdown) {
-      setLinkContainer("200px");
+    if (toggleNav) {
+      setNavHeight("200px");
       setLinkDisplay("block");
-      setDropdown(!toggleDropdown);
+      setNav(!toggleNav);
     } else {
-      setLinkContainer("40px");
+      setNavHeight("40px");
       setLinkDisplay("none");
-      setDropdown(!toggleDropdown);
+      setNav(!toggleNav);
     }
   };
   return (
     <>
-      <nav className={styles.Nav} style={{ height: linkContainer }}>
+      <header className={styles.header}>
+        <img className={styles.headerImage} src="/Up.jpg" alt="heading logo" />
+      </header>
+      <nav className={styles.Nav} style={{ height: navHeight }}>
         <div className={styles.hamburger} onClick={handleClick}>
           <div className={styles.line}></div>
           <div className={styles.line}></div>
@@ -28,17 +31,17 @@ function Nav() {
         </div>
         <ul className={styles.links} style={{ display: linkDisplay }}>
           <li>
-            <Link href="/admin">
+            <Link href="/about">
               <a>About</a>
             </Link>
           </li>
           <li>
-            <Link href="/admin">
+            <Link href="/series">
               <a>Series</a>
             </Link>
           </li>
           <li>
-            <Link href="/admin">
+            <Link href="/">
               <a>Contact</a>
             </Link>
           </li>

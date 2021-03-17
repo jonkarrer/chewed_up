@@ -5,6 +5,10 @@
   align-items: center;
   width: 100vw;
 }
+.headerImage {
+  object-fit: cover;
+  width: 100vw;
+}
 .links {
   list-style: none;
   width: 100px;
@@ -26,8 +30,12 @@
   background: black;
   margin: 6px;
 }
+/* Turns off header on a widescreen */
 @media only screen and (min-width: 950px) {
   .Nav {
+    display: none;
+  }
+  .header {
     display: none;
   }
 }
