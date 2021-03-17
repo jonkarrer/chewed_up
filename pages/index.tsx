@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Post from "../comps/Post";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 import styles from "../styles/Home.module.css";
 
