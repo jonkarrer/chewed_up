@@ -93,7 +93,7 @@ function Admin({ allPosts }): JSX.Element {
           <div className={styles.delete}>
             <ul>
               {allPosts.map((item) => (
-                <li>
+                <li key={item.id}>
                   {item.title}, {item.id},{" "}
                   <button onClick={() => destroy(item.id)}>Delete</button>
                 </li>

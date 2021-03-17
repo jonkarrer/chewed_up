@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Post from "../comps/Post";
+import Nav from "../comps/Nav";
 import { useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 import styles from "../styles/Home.module.css";
@@ -39,56 +40,58 @@ export default function HomeRun({ allPosts }) {
         />
         <title>Chewed Up</title>
       </Head>
+      <header className={styles.header}>
+        <img className={styles.headerImage} src="/Up.jpg" alt="heading logo" />
+      </header>
+      <Nav />
       <main>
-        <>
-          <div className={styles.Home} id="Home">
-            <div className={styles.leftPanel}>
-              <div className={styles.logo}>
-                <img className={styles.image} src="./logobig.jpg" alt="logo" />
-                <animated.div style={props} className={styles.rectangle}>
-                  <h1 className={styles.arrow}>
-                    <a className={styles.links} href="#Home">
-                      ^
-                    </a>
-                  </h1>
-                </animated.div>
-              </div>
-              <ul className={styles.list}>
-                <li>
-                  <Link href="/admin">
-                    <a>About</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/admin">
-                    <a>Series</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/admin">
-                    <a>Contact</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/admin">
-                    <a>Login</a>
-                  </Link>
-                </li>
-              </ul>
+        <div className={styles.Home} id="Home">
+          <div className={styles.leftPanel}>
+            <div className={styles.logo}>
+              <img className={styles.image} src="./logobig.jpg" alt="logo" />
+              <animated.div style={props} className={styles.rectangle}>
+                <h1 className={styles.arrow}>
+                  <a className={styles.links} href="#Home">
+                    ^
+                  </a>
+                </h1>
+              </animated.div>
             </div>
-            <div className={styles.postContainer}>
-              {allPosts.map((item) => (
-                <Post
-                  key={item.id}
-                  id={item.id}
-                  catagory={item.catagory}
-                  title={item.title}
-                  summary={item.summary}
-                />
-              ))}
-            </div>
+            <ul className={styles.list}>
+              <li>
+                <Link href="/admin">
+                  <a>About</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/admin">
+                  <a>Series</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/admin">
+                  <a>Contact</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/admin">
+                  <a>Login</a>
+                </Link>
+              </li>
+            </ul>
           </div>
-        </>
+          <div className={styles.postContainer}>
+            {allPosts.map((item) => (
+              <Post
+                key={item.id}
+                id={item.id}
+                catagory={item.catagory}
+                title={item.title}
+                summary={item.summary}
+              />
+            ))}
+          </div>
+        </div>
       </main>
     </div>
   );

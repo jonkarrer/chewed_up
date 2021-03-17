@@ -1,54 +1,108 @@
-.Home {
-  display: grid;
-  grid-template-columns: 300px auto; /*Panel width / posts width*/
-  background: #bfbfbf;
-  height: auto;
-  width: 100vw;
+/* This section is for widescreens */
+@media only screen and (min-width: 950px) {
+  .Home {
+    display: grid;
+    grid-template-columns: 300px auto; /*Panel width / posts width*/
+    background: #bfbfbf;
+    height: auto;
+    width: 100vw;
+  }
+  .header {
+    display: none;
+  }
+  .image {
+    height: 300px;
+    width: 300px;
+  }
+  .rectangle {
+    position: absolute;
+    width: 11px;
+    background: #fce6bd;
+    top: 157px;
+    left: 226px;
+  }
+  .arrow {
+    position: absolute;
+    bottom: -170px;
+    left: -27px;
+    font-size: 100px;
+  }
+  .links {
+    text-decoration: none;
+    color: white;
+  }
+  .links:hover {
+    cursor: pointer;
+  }
+  .list {
+    list-style: none;
+    z-index: 1;
+    width: 170px;
+    top: 50px;
+  }
+  .list li {
+    font-size: 1.6em;
+    text-align: right;
+    margin-bottom: 50px;
+    color: white;
+    height: 20px;
+  }
+  .list li:hover {
+    cursor: pointer;
+    color: yellow;
+  }
+  .postContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
-.image {
-  height: 300px;
-  width: 300px;
-}
-.rectangle {
-  position: absolute;
-  width: 11px;
-  background: #fce6bd;
-  top: 157px;
-  left: 226px;
-}
-.arrow {
-  position: absolute;
-  bottom: -170px;
-  left: -27px;
-  font-size: 100px;
-}
-.links {
-  text-decoration: none;
-  color: white;
-}
-.links:hover {
-  cursor: pointer;
-}
-.list {
-  list-style: none;
-  z-index: 1;
-  width: 170px;
-  top: 50px;
-}
-.list li {
-  font-size: 1.6em;
-  text-align: right;
-  margin-bottom: 50px;
-  color: white;
-  height: 20px;
-}
-.list li:hover {
-  cursor: pointer;
-  color: yellow;
-}
-.postContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* This section is for mobile */
+@media only screen and (max-width: 950px) {
+  .Home {
+    display: grid;
+    background: #bfbfbf;
+    height: auto;
+    width: 100vw;
+  }
+
+  .headerImage {
+    object-fit: cover;
+    width: 100vw;
+  }
+  .leftPanel {
+    display: none;
+  }
+  .links {
+    text-decoration: none;
+    color: white;
+  }
+  .links:hover {
+    cursor: pointer;
+  }
+  .list {
+    list-style: none;
+    z-index: 1;
+    width: 170px;
+    top: 50px;
+  }
+  .list li {
+    font-size: 1.6em;
+    text-align: right;
+    margin-bottom: 50px;
+    color: white;
+    height: 20px;
+  }
+  .list li:hover {
+    cursor: pointer;
+    color: yellow;
+  }
+  .postContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+  }
 }
