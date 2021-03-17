@@ -39,19 +39,25 @@
    }
    ```
 
-6. Migrate prisma to database, name migration 'init'
+6. Migrate prisma to database, name migration 'init', only if using sql lite.
 
    ```bash
    npx prisma migrate dev --preview-feature
    ```
 
-7. Go to prisma studio
+7. Push to prisma database if other
+
+   ```bash
+   npx prisma db push --preview-feature
+   ```
+
+8. Go to prisma studio
 
    ```bash
    npx prisma studio
    ```
 
-8. If I need to edit the model, refer to this site. Update model and run another migration in short. If it doesnt work, follow the prompt and run another migration until it says the data is floating. <https://www.prisma.io/docs/concepts/components/prisma-migrate/>
+9. If I need to edit the model, refer to this site. Update model and run another migration in short. If it doesnt work, follow the prompt and run another migration until it says the data is floating. <https://www.prisma.io/docs/concepts/components/prisma-migrate/>
 
 ## Use prisma
 
@@ -195,24 +201,3 @@
 1. I relied heavily on prisma's github for next.js. Refer to this link <https://github.com/prisma/prisma-examples/tree/latest/typescript/rest-nextjs-api-routes>
 
 2. Putting post folder in the api folder was the gotcha. /api/post was used as the fetch destination in the admin page. the real path is api/post/index. Kinda odd.
-
-## Build errors
-
-1. Critical dependency: the request of a dependency is an expression
-   10:41:28 PM: ./node_modules/@prisma/client/runtime/index.js
-
-2. M: ./node_modules/next/dist/next-server/server/load-components.js
-   10:41:28 PM: Critical dependency: the request of a dependency is an expression
-   10:41:28 PM: ./node_modules/next/dist/next-server/server/load-components.js
-   10:41:28 PM: Critical dependency: the request of a dependency is an expression
-   10:41:28 PM: ./node_modules/next/dist/next-server/server/require.js
-   10:41:28 PM: Critical dependency: the request of a dependency is an expression
-   10:41:28 PM: ./node_modules/next/dist/next-server/server/require.js
-   10:41:28 PM: Critical dependency: the request of a dependency is an expression
-   10:41:28 PM: ./node_modules/next/dist/next-server/server/require.js
-
-3. Critical dependency: the request of a dependency is an expression
-   10:41:28 PM: ./node_modules/@prisma/client/runtime/index.js
-   10:41:28 PM: Module not found: Can't resolve 'encoding' in '/opt/build/repo/node_modules/@prisma/client/runtime'
-   10:41:28 PM: ./node_modules/node-fetch/lib/index.js
-   10:41:28 PM: Module not found: Can't resolve 'encoding' in '/opt/build/repo/node_modules/node-fetch/lib'

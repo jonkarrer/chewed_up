@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import Splash from "../comps/Splash";
 import Post from "../comps/Post";
 import { useEffect, useState } from "react";
 import { useSpring, animated } from "react-spring";
@@ -18,11 +17,6 @@ export const getServerSideProps = async () => {
 
 export default function HomeRun({ allPosts }) {
   const [props, setHeight] = useSpring(() => ({ height: "100px" }));
-  const [homePosition, setHomePosition]: any = useState("fixed");
-
-  const handleClick = () => {
-    setHomePosition("relative");
-  };
 
   useEffect(() => {
     window.addEventListener("scroll", () =>
@@ -37,7 +31,6 @@ export default function HomeRun({ allPosts }) {
     <div className="container">
       <Head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -47,13 +40,8 @@ export default function HomeRun({ allPosts }) {
         <title>Chewed Up</title>
       </Head>
       <main>
-        <Splash handleClick={handleClick} />
         <>
-          <div
-            className={styles.Home}
-            style={{ position: homePosition }}
-            id="Home"
-          >
+          <div className={styles.Home} id="Home">
             <div className={styles.leftPanel}>
               <div className={styles.logo}>
                 <img className={styles.image} src="./logobig.jpg" alt="logo" />

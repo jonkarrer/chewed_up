@@ -79,7 +79,7 @@ function Admin({ allPosts }): JSX.Element {
             onChange={(e) => setBody(e.target.value)}
             placeholder="Body"
             value={body}
-            cols={70}
+            cols={200}
             rows={50}
           ></textarea>
           <input
