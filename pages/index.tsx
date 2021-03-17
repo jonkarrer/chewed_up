@@ -40,7 +40,6 @@ export default function HomeRun({ allPosts }) {
         />
         <title>Chewed Up</title>
       </Head>
-
       <main>
         <div className={styles.Home} id="Home">
           <div className={styles.leftPanel}>
