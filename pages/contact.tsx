@@ -1,20 +1,30 @@
 function Contact() {
   return (
     <div className="Contact">
-      <h1>Contact</h1>
-      <h3>
-        Email: <span>chewed_up@gmail.com</span>
-      </h3>
-      <h3>
-        Linkedin: <span>Jon Karrer</span>
-      </h3>
-      <h3>
-        Need a website? <span>nextweb.design</span>
-      </h3>
+      <div className="card-container">
+        <h1>Contact</h1>
+        <h3>
+          Email: <span>chewed_up@gmail.com</span>
+        </h3>
+        <h3>
+          Linkedin: <span>Jon Karrer</span>
+        </h3>
+        <h3>
+          Need a website? <span>nextweb.design</span>
+        </h3>
+      </div>
       <style jsx>{`
         .Contact {
           height: 100vh;
-          margin-top: 70px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .card-container {
+          border: grey solid thin;
+          width: 80%;
+          box-shadow: grey 10px 10px 10px;
         }
         h1 {
           color: #bfbfbf;

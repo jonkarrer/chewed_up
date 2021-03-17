@@ -59,11 +59,6 @@ export default function HomeRun({ allPosts }) {
                 </Link>
               </li>
               <li>
-                <Link href="/series">
-                  <a>Series</a>
-                </Link>
-              </li>
-              <li>
                 <Link href="/contact">
                   <a>Contact</a>
                 </Link>

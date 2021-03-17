@@ -3,4 +3,16 @@
   color: white;
   height: 80px;
   width: 100vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.links {
+  background: black;
+}
+.links li {
+  display: inline;
+  font-size: 2em;
+  margin: 20px;
 }
