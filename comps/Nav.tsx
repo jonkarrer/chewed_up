@@ -31,13 +31,13 @@ function Nav() {
         </div>
         <ul className={styles.links} style={{ display: linkDisplay }}>
           <li>
-            <Link href="/about">
-              <a>About</a>
+            <Link href="/">
+              <a>Home</a>
             </Link>
           </li>
           <li>
-            <Link href="/series">
-              <a>Series</a>
+            <Link href="/about">
+              <a>About</a>
             </Link>
           </li>
           <li>

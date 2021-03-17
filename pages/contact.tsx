@@ -13,10 +13,8 @@ function Contact() {
       </h3>
       <style jsx>{`
         .Contact {
-          height: 85vh;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
+          height: 100vh;
+          margin-top: 70px;
         }
         h1 {
           color: #bfbfbf;
