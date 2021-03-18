@@ -10,9 +10,19 @@
 }
 .links {
   background: black;
+  display: flex;
+  align-items: center;
 }
 .links li {
   display: inline;
-  font-size: 2em;
-  margin: 20px;
+  font-size: 1.1em;
+  margin: 5px;
+}
+/* For widescreen */
+@media only screen and (min-width: 950px) {
+  .links li {
+    display: inline;
+    font-size: 2em;
+    margin: 20px;
+  }
 }
