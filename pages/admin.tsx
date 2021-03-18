@@ -81,7 +81,6 @@ function Admin({ allPosts }): JSX.Element {
             value={body}
             cols={200}
             rows={50}
-            className={styles.textBody}
           ></textarea>
           <input
             disabled={!catagory || !title || !summary || !body}
