@@ -38,3 +38,9 @@
   flex: 1;
   border: lightskyblue solid thin;
 }
+.textBody {
+  white-space: pre-wrap;
+  white-space: pre-line;
+  border: red solid thin;
+  white-space: pre;
+}

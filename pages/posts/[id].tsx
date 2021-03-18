@@ -33,14 +33,19 @@ const PostTemplate = ({ posts }) => {
       </div>
       <style jsx>{`
         .container {
-          height: 100vh;
+          height: auto;
+          width: 100vw;
           display: flex;
           align-items: center;
           justify-content: center;
         }
         .card-container {
           border: grey solid thin;
-          width: 60%;
+          width: 90%;
+          max-width: 1000px;
+          height: auto;
+          margin-top: 40px;
+          margin-bottom: 40px;
           box-shadow: grey 10px 10px 10px;
         }
         h1 {
@@ -50,6 +55,8 @@ const PostTemplate = ({ posts }) => {
         p {
           margin: 20px;
           font-size: 1.2em;
+          white-space: pre-wrap;
+          overflow-wrap: break-word;
         }
       `}</style>
     </div>
