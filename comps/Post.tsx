@@ -15,10 +15,10 @@ const Post: React.FC<PostProps> = ({ id, catagory, title, summary }) => {
         <div className={styles.Post}>
           <div>
             <div
-              className={styles.imageBackground}
+              className={styles.outerBlock}
               style={{ background: "slateblue" }}
             >
-              <img src="./" alt="post-image" />
+              <div className={styles.innerBlock}></div>
             </div>
           </div>
           <div className={styles.postContent}>

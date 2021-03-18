@@ -14,7 +14,7 @@
     background: rgba(0, 0, 0, 0.05);
     cursor: pointer;
   }
-  .imageBackground {
+  .outerBlock {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,8 +25,7 @@
     min-height: 350px;
     max-height: 500px;
   }
-  .imageBackground img {
-    object-fit: cover;
+  .innerBlock {
     width: 20vw;
     min-width: 250px;
     max-width: 500px;
@@ -34,6 +33,7 @@
     min-height: 250px;
     max-height: 500px;
     box-shadow: black 0px 3px 20px;
+    background: red;
   }
   .postContent {
     display: flex;
@@ -52,13 +52,13 @@
     color: white;
   }
   .title {
-    font-size: 1.6em;
+    font-size: 2em;
     margin: 5px;
     margin-left: 20px;
     margin-right: 20px;
   }
   .body {
-    font-size: 1em;
+    font-size: 1.2em;
     margin: 5px;
     margin-right: 20px;
     margin-left: 20px;
