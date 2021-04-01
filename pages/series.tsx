@@ -15,6 +15,11 @@ export const getServerSideProps = async () => {
 function Series({ cooking, thoughts }) {
   return (
     <>
+      <div className="back">
+        <Link href="/">
+          <a>Go Home</a>
+        </Link>
+      </div>
       <div className="Series">
         <section>
           <h1 className="cooking">Cooking</h1>
@@ -44,6 +49,11 @@ function Series({ cooking, thoughts }) {
       <style jsx>{`
         .Series {
           height: 100vh;
+        }
+        .back a {
+          margin: 20px;
+          font-size: 2em;
+          color: blue;
         }
         h1 {
           font-size: 2em;

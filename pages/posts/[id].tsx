@@ -29,7 +29,7 @@ const PostTemplate = ({ posts }) => {
     <>
       <div className="back">
         <Link href="/">
-          <a>Go Back</a>
+          <a>Go Home</a>
         </Link>
       </div>
       <div className="container">

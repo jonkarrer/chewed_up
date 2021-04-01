@@ -1,8 +1,9 @@
 function About() {
   return (
     <div className="About">
+      <h1>About</h1>
       <div className="card-container">
-        <h1>About</h1>
+        <img src="/green.jpg" alt="imgage of me" />
         <p>
           Everyone has a story to tell. Without our memories to share we are
           empty vessels. Without anyone to share them with, we are empty souls.
@@ -14,16 +15,24 @@ function About() {
       </div>
       <style jsx>{`
         .About {
-          height: 100vh;
           display: flex;
-          flex-direction: column;
-          justify-content: center;
           align-items: center;
+          flex-direction: column;
+          height: 100vh;
+          margin-top: 25px;
         }
         .card-container {
+          display: flex;
+          align-items: center;
           border: grey solid thin;
           width: 80%;
+          max-width: 1000px;
           box-shadow: grey 10px 10px 10px;
+        }
+        .card-container img {
+          object-fit: fill;
+          height: 300px;
+          margin: 20px;
         }
         h1 {
           color: #bfbfbf;
@@ -32,8 +41,40 @@ function About() {
           margin-botton: 10px;
         }
         p {
-          margin: 20px;
+          margin: 40px;
           font-size: 1.5em;
+          white-space: pre-wrap;
+          overflow-wrap: break-word;
+        }
+        @media (max-width: 900px) {
+          .About {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 25px;
+            margin-bottom: 50px;
+            height: auto;
+          }
+          .card-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: grey solid thin;
+            width: 90%;
+            box-shadow: grey 10px 10px 10px;
+          }
+          .card-container img {
+            object-fit: fill;
+            height: 250px;
+            margin: 20px;
+          }
+          p {
+            margin: 30px;
+            font-size: 1.3em;
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+          }
         }
       `}</style>
     </div>
