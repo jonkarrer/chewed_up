@@ -40,6 +40,11 @@ function Nav() {
               <a>About</a>
             </Link>
           </li>
+          <li>
+            <Link href="/series">
+              <a>Series</a>
+            </Link>
+          </li>
         </ul>
       </nav>
     </>

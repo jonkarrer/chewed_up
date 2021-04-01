@@ -42,8 +42,12 @@ function Series({ cooking, thoughts }) {
         </section>
       </div>
       <style jsx>{`
+        .Series {
+          height: 80vh;
+        }
         h1 {
           font-size: 2em;
+          margin-left: 10px;
         }
         ul {
           list-style: none;
@@ -53,6 +57,7 @@ function Series({ cooking, thoughts }) {
           font-size: 2em;
           margin-right: 35px;
           padding: 10px;
+          max-width: 800px;
         }
         li a {
           color: black;
