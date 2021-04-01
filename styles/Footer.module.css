@@ -15,7 +15,7 @@
 }
 .links li {
   display: inline;
-  margin-right: 10px;
+  margin: 15px;
 }
 /* For widescreen */
 @media only screen and (min-width: 950px) {
