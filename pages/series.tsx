@@ -21,6 +21,14 @@ function Series({ cooking }) {
           ))}
         </ul>
       </section>
+      <section className="cooking">
+        <h1>Cooking</h1>
+        <ul>
+          {cooking.map((item) => (
+            <li>{item.title}</li>
+          ))}
+        </ul>
+      </section>
     </div>
   );
 }

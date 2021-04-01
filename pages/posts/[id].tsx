@@ -1,5 +1,5 @@
 import prisma from "../../lib/prisma";
-
+import Link from "next/link";
 export const getStaticPaths = async () => {
   const data = await prisma.post.findMany();
 
@@ -26,12 +26,24 @@ export const getStaticProps = async (context) => {
 };
 const PostTemplate = ({ posts }) => {
   return (
-    <div className="container">
-      <div className="card-container">
-        <h1>{posts.title}</h1>
-        <p>{posts.body}</p>
+    <>
+      <div className="back">
+        <Link href="/">
+          <a>Go Back</a>
+        </Link>
+      </div>
+      <div className="container">
+        <div className="card-container">
+          <h1>{posts.title}</h1>
+          <p>{posts.body}</p>
+        </div>
       </div>
       <style jsx>{`
+        a {
+          margin: 20px;
+          font-size: 2em;
+          color: blue;
+        }
         .container {
           height: auto;
           width: 100vw;
@@ -40,25 +52,24 @@ const PostTemplate = ({ posts }) => {
           justify-content: center;
         }
         .card-container {
-          border: grey solid thin;
+          border: lightgrey solid thin;
           width: 90%;
-          max-width: 1000px;
+          max-width: 800px;
           height: auto;
           margin-top: 40px;
           margin-bottom: 40px;
-          box-shadow: grey 10px 10px 10px;
         }
         h1 {
           margin: 25px;
         }
         p {
           margin: 25px;
-          font-size: 1.2em;
+          font-size: 1.4em;
           white-space: pre-wrap;
           overflow-wrap: break-word;
         }
       `}</style>
-    </div>
+    </>
   );
 };
 
