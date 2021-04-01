@@ -43,7 +43,7 @@ function Series({ cooking, thoughts }) {
       </div>
       <style jsx>{`
         .Series {
-          height: 80vh;
+          height: 100vh;
         }
         h1 {
           font-size: 2em;

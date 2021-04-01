@@ -15,6 +15,11 @@ function Footer() {
           </Link>
         </li>
         <li>
+          <Link href="/series">
+            <a>Series</a>
+          </Link>
+        </li>
+        <li>
           <Link href="/login">
             <a>Admin</a>
           </Link>
