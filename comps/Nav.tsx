@@ -46,7 +46,7 @@ function Nav() {
             </Link>
           </li>
           <li>
-            <Link href="/admin">
+            <Link href="/login">
               <a>Login</a>
             </Link>
           </li>

@@ -49,11 +49,10 @@ const PostTemplate = ({ posts }) => {
           box-shadow: grey 10px 10px 10px;
         }
         h1 {
-          color: red;
-          margin: 20px;
+          margin: 25px;
         }
         p {
-          margin: 20px;
+          margin: 25px;
           font-size: 1.2em;
           white-space: pre-wrap;
           overflow-wrap: break-word;
