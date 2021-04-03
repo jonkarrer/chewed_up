@@ -59,11 +59,15 @@
 @media only screen and (max-width: 950px) {
   .Home {
     display: grid;
+    row-gap: 1em;
     background: #bfbfbf;
-    height: auto;
     width: 100vw;
   }
-
+  .postContainer {
+    display: grid;
+    row-gap: 30px;
+    padding-bottom: 30px;
+  }
   .leftPanel {
     display: none;
   }
